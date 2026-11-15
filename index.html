@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Caixa</title>
+  <meta name="description" content="Registro de entradas e saídas, pessoal e negócio.">
+  <meta name="theme-color" content="#16181d" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Caixa">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Caixa</h1>
+    <div id="carteiras" class="carteiras" role="group" aria-label="Carteira"></div>
+  </header>
+
+  <main id="conteudo" aria-live="polite"><p class="vazio">Carregando…</p></main>
+
+  <button class="fab" data-acao="novo" aria-label="Novo lançamento">+</button>
+
+  <nav class="abas" aria-label="Seções">
+    <button data-acao="tela" data-tela="inicio"><span aria-hidden="true">⌂</span>Início</button>
+    <button data-acao="tela" data-tela="extrato"><span aria-hidden="true">≡</span>Extrato</button>
+    <button data-acao="tela" data-tela="contas"><span aria-hidden="true">◷</span>Contas</button>
+    <button data-acao="tela" data-tela="graficos"><span aria-hidden="true">◔</span>Gráficos</button>
+    <button data-acao="tela" data-tela="ajustes"><span aria-hidden="true">⚙</span>Ajustes</button>
+  </nav>
+
+  <dialog id="folha" class="folha"></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
